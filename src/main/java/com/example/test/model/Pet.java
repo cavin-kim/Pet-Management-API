@@ -20,9 +20,9 @@ public class Pet {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private Integer user_id;
+    private User user;
 
     @Column(nullable = false)
     private String species;
@@ -57,12 +57,12 @@ public class Pet {
         this.name = name;
     }
 
-    public Integer getUser_id() {
-        return user_id;
+    public User getUser() {
+        return user;
     }
 
-    public void setUser_id(Integer user_id) {
-        this.user_id = user_id;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public String getSpecies() {
